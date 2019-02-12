@@ -5,20 +5,24 @@ import (
     "fmt"
     )
 
-func RainSpeak (drop int) string {
-    var result string
+func Convert (drop int) (string) {
+    results := ""
     if drop % 3 == 0 {
-        result := fmt.Sprintf("Pling")
-    } else if drop % 5 == 0 {
-        result := fmt.Sprintf("Plong")
-    } else if drop % 7 == 0 {
-        result := fmt.Sprintf("Plang")
-    } else {
-        result := strconv.Itoa(drop)
+        results += "Pling"
     }
-    return result
+    if drop % 5 == 0 {
+        results += "Plang"
+    }
+    if drop % 7 == 0 {
+        results += "Plong"
+    }
+
+    if len(results) == 0 {
+        results += strconv.Itoa(drop)
+    }
+    return results
 }
 
 func main() {
-    fmt.Println(RainSpeak(3))
+    fmt.Println(Convert(3))
 }
