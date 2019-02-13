@@ -24,7 +24,7 @@ func SumOfSquares(N int) int {
 
     return sumSquare
 }
-// Difference is a function that subtracts the Sum of the Squares of the first N natrual numbers from the Square of their sum 
+// Difference is a function that subtracts the Sum of the Squares of the first N natural numbers from the Square of their sum 
 func Difference(N int) (int) {
     squareSum := SquareOfSum(N)
     sumSquare := SumOfSquares(N)
