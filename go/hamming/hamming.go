@@ -4,7 +4,7 @@ import "fmt"
 
 var a, b string = "GTCAGTCA", "GTAACTGT"
 
-// Distance: Takes in two strings and returns their hamming distance as an int
+// Distance takes in two strings and returns their hamming distance as an int
 func Distance(a, b string) (int, error) {
 
     hammingDistance := 0

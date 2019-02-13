@@ -5,7 +5,7 @@ import (
     "strings"
 )
 
-// Score: Takes in a word that would be played in Scrabble and returns the score as an int
+// Score takes in a word that would be played in Scrabble and returns the score as an int
 func Score (word string) (int) {
     // Increment this value to get final score
     score := 0

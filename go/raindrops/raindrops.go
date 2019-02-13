@@ -5,7 +5,7 @@ import (
     "fmt"
     )
 
-// Convert: This FizzBuzz-like function checks to see if the value is divisible
+// Convert is a FizzBuzz-like function that checks to see if the value is divisible
 // by 3 (return 'Pling'), by 5 (returns 'Plang') or by 7 (returns 'Plong')
 func Convert (drop int) (string) {
     results := ""
