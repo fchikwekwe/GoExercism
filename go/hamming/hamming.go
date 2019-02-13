@@ -4,8 +4,9 @@ import "fmt"
 
 var a, b string = "GTCAGTCA", "GTAACTGT"
 
+// Distance: Takes in two strings and returns their hamming distance as an int
 func Distance(a, b string) (int, error) {
-    // Takes in two strings and returns their hamming distance as an int
+
     hammingDistance := 0
     error := fmt.Errorf("cannot compare; strings are not the same length")
     if len(a) == len(b) {

@@ -3,6 +3,7 @@
 package twofer
 
 import "fmt"
+
 // ShareWith checks to see if we should return a string with name or with you
 func ShareWith(name string) string {
 	if name != "" {
