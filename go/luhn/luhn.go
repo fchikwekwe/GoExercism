@@ -18,6 +18,7 @@ func Valid(number string) bool {
 	var sum int
 
 	for i := len(number); i > -1; i-- {
+		fmt.Println(i)
 		num, err := strconv.Atoi(numArr[i])
 		// Check to see if all values in string are valid digits
 		if err != nil {
