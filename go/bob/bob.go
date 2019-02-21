@@ -1,15 +1,43 @@
-// This is a "stub" file.  It's a little start on your solution.
-// It's not a complete solution though; you have to write some code.
+// Package bob checks what you say to bob and then gives a response.
+package main
 
-// Package bob should have a package comment that summarizes what it's about.
-// https://golang.org/doc/effective_go.html#commentary
-package bob
+import (
+	"fmt"
+	"strings"
+	"unicode"
+)
 
-// Hey should have a comment documenting it.
+// Hey returns a reply from lackadaisical bob
+// depending on what yoy say (or don't say) to him.
 func Hey(remark string) string {
-	// Write some code here to pass the test suite.
-	// Then remove all the stock comments.
-	// They're here to help you get started but they only clutter a finished solution.
-	// If you leave them in, reviewers may protest!
-	return ""
+	remark = strings.Trim(remark, " ")
+	remark = strings.Trim(remark, "\n")
+	remark = strings.Trim(remark, "\t")
+
+	if len(remark) < 1 {
+		return "Fine. Be that way!"
+	}
+
+	if strings.Contains(remark, "?") {
+		for _, rune := range remark {
+			fmt.Println(remark, rune)
+			if unicode.IsLower(rune) {
+				// Question with some lowercase letters
+				return "Sure."
+			}
+		}
+		// All letters are capital and question
+		return "Calm down, I know what I'm doing!"
+	}
+
+	for _, rune := range remark {
+		if unicode.IsLower(rune) {
+			return "Whatever."
+		}
+	}
+	return "Whoa, chill out!"
+}
+
+func main() {
+	fmt.Println(Hey("\n"))
 }
