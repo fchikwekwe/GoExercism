@@ -1,4 +1,4 @@
-package grains
+package main
 
 import (
 	"testing"

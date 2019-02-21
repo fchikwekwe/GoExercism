@@ -1,4 +1,4 @@
-package grains
+package main
 
 // Source: exercism/problem-specifications
 // Commit: f079c2d grains: Move input (square) to input object (#1191)
