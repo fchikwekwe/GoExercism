@@ -1,4 +1,4 @@
-package main
+package bob
 
 // Source: exercism/problem-specifications
 // Commit: ca79943 Bob: Fix grammatical error in testdata (#1319)
