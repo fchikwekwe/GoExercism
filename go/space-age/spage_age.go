@@ -1,8 +1,9 @@
 package space
 
+// Planet is a type that should only be a valid planet in our solar system as type string
 type Planet string
 
-// Age is ...
+// Age is a function to calculate how old someone is on different planets
 func Age(seconds float64, planet Planet) float64 {
 	var earthSeconds float64 = 31557600
 
